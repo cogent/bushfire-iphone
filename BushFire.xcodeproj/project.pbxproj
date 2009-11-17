@@ -101,6 +101,23 @@
 		0ACABCCC10B2A37300441911 /* Third Party */ = {
 			isa = PBXGroup;
 			children = (
+				0ACABCF710B2AAD800441911 /* GH-Unit */,
+			);
+			name = "Third Party";
+			sourceTree = "<group>";
+		};
+		0ACABCDE10B2A3CC00441911 /* Unit-Tests */ = {
+			isa = PBXGroup;
+			children = (
+				0ACABCE110B2A52800441911 /* RegisterLocationTest.m */,
+			);
+			name = "Unit-Tests";
+			path = "unit-tests";
+			sourceTree = "<group>";
+		};
+		0ACABCF710B2AAD800441911 /* GH-Unit */ = {
+			isa = PBXGroup;
+			children = (
 				0ACABCCD10B2A39E00441911 /* GHAsyncTestCase.h */,
 				0ACABCCE10B2A39E00441911 /* GHTest.h */,
 				0ACABCCF10B2A39E00441911 /* GHTestCase.h */,
@@ -117,16 +134,7 @@
 				0ACABCDA10B2A39E00441911 /* NSException+GHTestFailureExceptions.h */,
 				0ACABCDB10B2A39E00441911 /* NSValue+GHValueFormatter.h */,
 			);
-			name = "Third Party";
-			sourceTree = "<group>";
-		};
-		0ACABCDE10B2A3CC00441911 /* Unit-Tests */ = {
-			isa = PBXGroup;
-			children = (
-				0ACABCE110B2A52800441911 /* RegisterLocationTest.m */,
-			);
-			name = "Unit-Tests";
-			path = "unit-tests";
+			name = "GH-Unit";
 			sourceTree = "<group>";
 		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
