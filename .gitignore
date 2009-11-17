@@ -1,0 +1,4 @@
+build
+.DS_Store
+BushFire.xcodeproj/*.mode1v3
+BushFire.xcodeproj/*.pbxuser
