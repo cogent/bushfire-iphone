@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-#import "GHTest.h"
+#import "GHUnit.h"
 
-@interface RegisterLocationTest : GHTest {
+@interface RegisterLocationTest : GHTestCase {
   
 }
 
@@ -39,7 +39,7 @@
 }   
 
 - (void)testNothing {
-  
+  GHAssertNil(nil, @"never fail");
 }
 
 @end
