@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A20F21810BBC6B700BDEFFB /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A20F21710BBC6B700BDEFFB /* LocationManager.m */; };
+		0A20F23D10BBCDE900BDEFFB /* RegisteredLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A20F23C10BBCDE900BDEFFB /* RegisteredLocation.m */; };
+		0A20F23E10BBCDE900BDEFFB /* RegisteredLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A20F23C10BBCDE900BDEFFB /* RegisteredLocation.m */; };
 		0ACABC1110B2A31900441911 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ACABC1010B2A31900441911 /* CoreLocation.framework */; };
 		0ACABCC610B2A33800441911 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		0ACABCC710B2A33800441911 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -26,6 +29,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A20F21610BBC6B700BDEFFB /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
+		0A20F21710BBC6B700BDEFFB /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
+		0A20F21910BBC74A00BDEFFB /* CommonMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonMacros.h; sourceTree = "<group>"; };
+		0A20F23B10BBCDE900BDEFFB /* RegisteredLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisteredLocation.h; sourceTree = "<group>"; };
+		0A20F23C10BBCDE900BDEFFB /* RegisteredLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisteredLocation.m; sourceTree = "<group>"; };
 		0ACABC0A10B2A2B500441911 /* Unit Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Unit Tests.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ACABC0C10B2A2B500441911 /* Unit Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Unit Tests-Info.plist"; sourceTree = "<group>"; };
 		0ACABC1010B2A31900441911 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -90,12 +98,25 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				0A20F21210BBC55400BDEFFB /* Location */,
 				1D3623240D0F684500981E51 /* BushFireAppDelegate.h */,
 				1D3623250D0F684500981E51 /* BushFireAppDelegate.m */,
 				28D7ACF60DDB3853001CB0EB /* BushFireViewController.h */,
 				28D7ACF70DDB3853001CB0EB /* BushFireViewController.m */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		0A20F21210BBC55400BDEFFB /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				0A20F21610BBC6B700BDEFFB /* LocationManager.h */,
+				0A20F21710BBC6B700BDEFFB /* LocationManager.m */,
+				0A20F23B10BBCDE900BDEFFB /* RegisteredLocation.h */,
+				0A20F23C10BBCDE900BDEFFB /* RegisteredLocation.m */,
+			);
+			name = Location;
+			path = location;
 			sourceTree = "<group>";
 		};
 		0ACABCCC10B2A37300441911 /* Third Party */ = {
@@ -166,6 +187,7 @@
 			children = (
 				32CA4F630368D1EE00C91783 /* BushFire_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
+				0A20F21910BBC74A00BDEFFB /* CommonMacros.h */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -289,6 +311,8 @@
 			files = (
 				0ACABCDC10B2A39E00441911 /* GHUnitIPhoneTestMain.m in Sources */,
 				0ACABCE210B2A52800441911 /* RegisterLocationTest.m in Sources */,
+				0A20F21810BBC6B700BDEFFB /* LocationManager.m in Sources */,
+				0A20F23D10BBCDE900BDEFFB /* RegisteredLocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +323,7 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* BushFireAppDelegate.m in Sources */,
 				28D7ACF80DDB3853001CB0EB /* BushFireViewController.m in Sources */,
+				0A20F23E10BBCDE900BDEFFB /* RegisteredLocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,7 +339,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				GCC_PREFIX_HEADER = BushFire_Prefix.pch;
 				INFOPLIST_FILE = "Unit Tests-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = (
@@ -344,7 +369,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				GCC_PREFIX_HEADER = BushFire_Prefix.pch;
 				INFOPLIST_FILE = "Unit Tests-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = (

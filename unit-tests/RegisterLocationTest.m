@@ -9,37 +9,49 @@
 #import <Foundation/Foundation.h>
 
 #import "GHUnit.h"
+#import "LocationManager.h"
 
-@interface RegisterLocationTest : GHTestCase {
-  
+@interface RegisterLocationTest : GHTestCase
+{
+  LocationManager *_manager;
 }
 
 @end
 
 @implementation RegisterLocationTest
 
-- (BOOL)shouldRunOnMainThread {
+- (BOOL)shouldRunOnMainThread
+{
 	return NO;
 }
 
-- (void)setUpClass {
-    // Run at start of all tests in the class
+- (void)setUpClass
+{
+  _manager = [[LocationManager alloc] init];
 }
 
-- (void)tearDownClass {
-    // Run at end of all tests in the class
+
+- (void)tearDownClass
+{
+	RELEASE_SAFELY(_manager);
 }
 
-- (void)setUp {
+- (void)setUp
+{
     // Run before each test method
 }
 
-- (void)tearDown {
+- (void)tearDown
+{
     // Run after each test method
 }   
 
-- (void)testNothing {
-  GHAssertNil(nil, @"never fail");
+- (void)testShouldAllowLocationsToBeRegistered
+{
+  RegisteredLocation *location = [[RegisteredLocation alloc] initWithLatitude:1.1 longitude:2.0 notificationRadius:10];
+	[_manager addLocation:location];
+
+  GHAssertEquals(1u, [[_manager registeredLocations] count], @"Expected a single location but found %d", [[_manager registeredLocations] count]);
 }
 
 @end
