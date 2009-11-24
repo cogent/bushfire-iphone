@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
-@interface BushFireViewController : UIViewController {
-
+@interface BushFireViewController : UIViewController
+{
+	IBOutlet MKMapView *_mapView;
 }
+
+- (IBAction) addLocation;
+
 
 @end
 

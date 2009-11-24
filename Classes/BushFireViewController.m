@@ -1,65 +1,58 @@
-//
-//  BushFireViewController.m
-//  BushFire
-//
-//  Created by Kevin O'Neill on 17/11/09.
-//  Copyright Kevin O Neill 2009. All rights reserved.
-//
+  //
+  //  BushFireViewController.m
+  //  BushFire
+  //
+  //  Created by Kevin O'Neill on 17/11/09.
+  //  Copyright Kevin O Neill 2009. All rights reserved.
+  //
 
 #import "BushFireViewController.h"
+#import "RegisteredLocation.h"
 
 @implementation BushFireViewController
 
-
-
-/*
-// The designated initializer. Override to perform setup that is required before the view is loaded.
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        // Custom initialization
-    }
-    return self;
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+  if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])
+  {
+    _mapView = nil;
+  }
+  
+  return self;
 }
-*/
 
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView {
-}
-*/
-
-
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-*/
-
-
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
 
 - (void)didReceiveMemoryWarning {
-	// Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-	
-	// Release any cached data, images, etc that aren't in use.
+  [super didReceiveMemoryWarning];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+//  CLLocationCoordinate2D cogent = {-37.807221, 144.19277};
+//  
+//  [_mapView setCenterCoordinate:cogent animated:animated];
 }
 
 - (void)viewDidUnload {
-	// Release any retained subviews of the main view.
-	// e.g. self.myOutlet = nil;
+  RELEASE_SAFELY(_mapView);
+}
+
+- (void)dealloc
+{
+  RELEASE_SAFELY(_mapView);
+  
+  [super dealloc];
+}
+
+- (IBAction) addLocation
+{
+  RegisteredLocation *location = [[RegisteredLocation alloc] initWithLatitude:-37.807221 longitude:144.19277 notificationRadius:25];
+  [_mapView addAnnotation:location];
+  [_mapView selectAnnotation:location animated:YES];
+  
+  RELEASE_SAFELY(location);
 }
 
 
-- (void)dealloc {
-    [super dealloc];
-}
 
 @end

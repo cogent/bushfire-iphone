@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MapKit/MKAnnotation.h>
 
-
-@interface RegisteredLocation : NSObject 
+@interface RegisteredLocation : NSObject <MKAnnotation>
 {
   double _latitude;
   double _longitude;

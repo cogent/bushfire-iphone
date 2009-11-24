@@ -10,6 +10,7 @@
 		0A20F21810BBC6B700BDEFFB /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A20F21710BBC6B700BDEFFB /* LocationManager.m */; };
 		0A20F23D10BBCDE900BDEFFB /* RegisteredLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A20F23C10BBCDE900BDEFFB /* RegisteredLocation.m */; };
 		0A20F23E10BBCDE900BDEFFB /* RegisteredLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A20F23C10BBCDE900BDEFFB /* RegisteredLocation.m */; };
+		0A20F31210BBE70A00BDEFFB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A20F31110BBE70A00BDEFFB /* MapKit.framework */; };
 		0ACABC1110B2A31900441911 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ACABC1010B2A31900441911 /* CoreLocation.framework */; };
 		0ACABCC610B2A33800441911 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		0ACABCC710B2A33800441911 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -34,6 +35,7 @@
 		0A20F21910BBC74A00BDEFFB /* CommonMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonMacros.h; sourceTree = "<group>"; };
 		0A20F23B10BBCDE900BDEFFB /* RegisteredLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisteredLocation.h; sourceTree = "<group>"; };
 		0A20F23C10BBCDE900BDEFFB /* RegisteredLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisteredLocation.m; sourceTree = "<group>"; };
+		0A20F31110BBE70A00BDEFFB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		0ACABC0A10B2A2B500441911 /* Unit Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Unit Tests.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ACABC0C10B2A2B500441911 /* Unit Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Unit Tests-Info.plist"; sourceTree = "<group>"; };
 		0ACABC1010B2A31900441911 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -89,6 +91,7 @@
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
 				0ACABC1110B2A31900441911 /* CoreLocation.framework in Frameworks */,
+				0A20F31210BBE70A00BDEFFB /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +181,7 @@
 				0ACABCCC10B2A37300441911 /* Third Party */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				0ACABC0C10B2A2B500441911 /* Unit Tests-Info.plist */,
+				0A20F31110BBE70A00BDEFFB /* MapKit.framework */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";

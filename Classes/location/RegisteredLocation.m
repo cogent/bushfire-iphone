@@ -8,7 +8,6 @@
 
 #import "RegisteredLocation.h"
 
-
 @implementation RegisteredLocation
 
 @synthesize latitude = _latitude;
@@ -25,6 +24,13 @@
   }
   
   return self;
+}
+
+- (CLLocationCoordinate2D) coordinate
+{
+  CLLocationCoordinate2D coordinate = { _latitude, _longitude };
+  
+  return coordinate;
 }
 
 @end
