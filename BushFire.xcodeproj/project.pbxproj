@@ -201,6 +201,7 @@
 				0ACABC0610B2A2B500441911 /* Resources */,
 				0ACABC0710B2A2B500441911 /* Sources */,
 				0ACABC0810B2A2B500441911 /* Frameworks */,
+				0A20F1A610BBB58700BDEFFB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -264,6 +265,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A20F1A610BBB58700BDEFFB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "third-party/gh-unit/RunTests.sh\nstatus=\"$?\"\nexit \"$status\"\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0ACABC0710B2A2B500441911 /* Sources */ = {
